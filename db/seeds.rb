@@ -22,10 +22,10 @@ User.create(username:"jeff", email: "j@j.com", password: "abc123")
 User.create(username:"ted", email: "t@t.com", password: "abc123")
 puts "users created!"
 
-Cart.create(userid: User.all.sample.id, checkedout: false)
-Cart.create(userid: User.all.sample.id, checkedout: false)
-Cart.create(userid: User.all.sample.id, checkedout: false)
-Cart.create(userid: User.all.sample.id, checkedout: false)
+Cart.create(user_id: User.all.sample.id, checkedout: false)
+Cart.create(user_id: User.all.sample.id, checkedout: false)
+Cart.create(user_id: User.all.sample.id, checkedout: false)
+Cart.create(user_id: User.all.sample.id, checkedout: false)
 puts "carts created!"
 
 Meal.create(
@@ -641,7 +641,7 @@ puts "meals seeded!"
 
 
 10.times do
-    Order.create(mealid: Meal.all.sample.id, cartid: Cart.all.sample.id, mealqty: rand(1..4))
+    Order.create(meal_id: Meal.all.sample.id, cart_id: Cart.all.sample.id, mealqty: rand(1..4))
 end
 puts "orders seeded!"
 
