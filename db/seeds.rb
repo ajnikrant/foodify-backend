@@ -7,8 +7,16 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Meal.destroy_all
+User.destroy_all
 
 Meal.reset_pk_sequence
+User.reset_pk_sequence
+
+User.create(username:"amanda", email: "a@a.com", password: "abc123")
+User.create(username:"jeff", email: "j@j.com", password: "abc123")
+User.create(username:"ted", email: "t@t.com", password: "abc123")
+
+puts "users created!"
 
 
 Meal.create(
