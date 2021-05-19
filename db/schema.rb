@@ -10,7 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_150151) do
+ActiveRecord::Schema.define(version: 2021_05_19_151918) do
+
+  create_table "carts", force: :cascade do |t|
+    t.integer "userid"
+    t.boolean "checkedout"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "meals", force: :cascade do |t|
     t.string "name"
@@ -30,6 +37,14 @@ ActiveRecord::Schema.define(version: 2021_05_19_150151) do
     t.integer "protein"
     t.integer "carbs"
     t.boolean "keto"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "orders", force: :cascade do |t|
+    t.integer "mealid"
+    t.integer "cartid"
+    t.integer "mealqty"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

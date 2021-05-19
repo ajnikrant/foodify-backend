@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  mealid: MyString
+  cartid: MyString
+  mealqty: MyString
+
+two:
+  mealid: MyString
+  cartid: MyString
+  mealqty: MyString
