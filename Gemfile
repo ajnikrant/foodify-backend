@@ -57,3 +57,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'activerecord-reset-pk-sequence'
+
+gem 'rack-cors', :require => 'rack/cors'
+
+gem 'active_model_serializers'
