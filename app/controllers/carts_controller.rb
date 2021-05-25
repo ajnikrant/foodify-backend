@@ -30,7 +30,7 @@ class CartsController < ApplicationController
 
 # private
     def cart_params
-        params.require(:cart).permit(:userid, :checkedout)
+        params.require(:cart).permit(:userid, :checkedout, :subtotal)
     end
 
 end

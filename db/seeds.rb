@@ -22,10 +22,10 @@ User.create(username:"jeff", email: "j@j.com", password: "abc123")
 User.create(username:"ted", email: "t@t.com", password: "abc123")
 puts "users created!"
 
-Cart.create(user_id: User.all.sample.id, checkedout: false, subtotal: rand(1..3))
-Cart.create(user_id: User.all.sample.id, checkedout: false, subtotal: rand(1..3))
-Cart.create(user_id: User.all.sample.id, checkedout: false, subtotal: rand(1..3))
-Cart.create(user_id: User.all.sample.id, checkedout: false, subtotal: rand(1..3))
+Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
+Cart.create(user_id: 1, checkedout: true, subtotal: 0.0)
+Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
+Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
 puts "carts created!"
 
 Meal.create(
