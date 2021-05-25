@@ -9,10 +9,12 @@
 Meal.destroy_all
 User.destroy_all
 Cart.destroy_all
+Order.destroy_all
 
 Meal.reset_pk_sequence
 User.reset_pk_sequence
 Cart.reset_pk_sequence
+Order.reset_pk_sequence
 
 
 
@@ -23,9 +25,9 @@ User.create(username:"ted", email: "t@t.com", password: "abc123")
 puts "users created!"
 
 Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
-Cart.create(user_id: 1, checkedout: true, subtotal: 0.0)
-Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
-Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
+# Cart.create(user_id: 1, checkedout: true, subtotal: 0.0)
+# Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
+# Cart.create(user_id: 1, checkedout: false, subtotal: 0.0)
 puts "carts created!"
 
 Meal.create(
@@ -640,8 +642,8 @@ Meal.create(
 puts "meals seeded!"
 
 
-10.times do
-    Order.create(meal_id: Meal.all.sample.id, cart_id: Cart.all.sample.id, mealqty: rand(1..4))
-end
+# 10.times do
+#     Order.create(meal_id: Meal.all.sample.id, cart_id: Cart.all.sample.id, mealqty: rand(1..4))
+# end
 puts "orders seeded!"
 
